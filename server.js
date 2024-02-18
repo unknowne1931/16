@@ -11,13 +11,13 @@ const fs = require('fs');
 
 
 const app = express();
-const port = 5000;
+const port = 80;
 app.use(express.static('public'))
 app.use(express.json());
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ['https://stawro.com','https://www.stawro.com'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
@@ -44,8 +44,8 @@ httpsServer.listen(443)
 // to here https server
 */
 
-app.listen(5000, () => {
-  console.log(`Server is running on port 5000`);
+app.listen(80, () => {
+  console.log(`Server is running on port 80`);
 });
 
 
